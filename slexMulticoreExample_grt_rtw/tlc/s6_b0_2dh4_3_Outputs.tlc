@@ -1,0 +1,56 @@
+%implements s6_b0_2dh4_3_Outputs "C"
+
+%function OutputsForTID(block, system, tid) Output
+%if tid == 1
+%assign ::GlobalCurrentTID = 1
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcOutputsFcnOfS3B0Tid1 = OpaqueTLCBlockFcnForMdlRefTID("Outputs", 3, 0, 1, 3, 1)
+%if !WHITE_SPACE(tlcOutputsFcnOfS3B0Tid1)
+/* ModelReference: '<Root>/Fcn2' */
+%<tlcOutputsFcnOfS3B0Tid1>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutput1LocalVars", localVarDecl)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 2
+%assign ::GlobalCurrentTID = 2
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcOutputsFcnOfS3B0Tid2 = OpaqueTLCBlockFcnForMdlRefTID("Outputs", 3, 0, 2, 3, 2)
+%if !WHITE_SPACE(tlcOutputsFcnOfS3B0Tid2)
+/* ModelReference: '<Root>/Fcn2' */
+%<tlcOutputsFcnOfS3B0Tid2>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutput2LocalVars", localVarDecl)>
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction
+%function OutputsFcnProtoTypeForTID(block, system, tid) Output
+%if tid == 1
+%assign ::GlobalCurrentTID = 1
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(3, 1, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 2
+%assign ::GlobalCurrentTID = 2
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(3, 2, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction

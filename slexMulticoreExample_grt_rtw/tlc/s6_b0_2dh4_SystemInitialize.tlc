@@ -1,0 +1,44 @@
+%implements s6_b0_2dh4_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[4], "SystemInitialize",0)
+%<SLibCGIRGenReusableSysCall("SystemInitialize", [], 4, 0, 4, 0, 4, 6)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[3], "SystemInitialize",0)
+%<SLibCGIRGenReusableSysCall("SystemInitialize", [], 3, 0, 4, 0, 4, 6)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[2], "SystemInitialize",0)
+%<SLibCGIRGenReusableSysCall("SystemInitialize", [], 2, 0, 4, 0, 4, 6)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[5], "SystemInitialize",0)
+%<SLibCGIRGenReusableSysCall("SystemInitialize", [], 5, 0, 4, 0, 4, 6)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[1], "SystemInitialize",0)
+%<SLibCGIRGenReusableSysCall("SystemInitialize", [], 1, 0, 4, 0, 4, 6)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[0], "SystemInitialize",0)
+%<SLibCGIRGenReusableSysCall("SystemInitialize", [], 0, 0, 4, 0, 4, 6)>\
+
+%endif
+%<SLibInsertInitPeriodicCStatesFcn(system)>
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void SystemInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(6, 1, fcnProtoType)>
+%endfunction

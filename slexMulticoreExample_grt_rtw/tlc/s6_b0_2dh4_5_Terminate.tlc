@@ -1,0 +1,22 @@
+%implements s6_b0_2dh4_5_Terminate "C"
+
+%function Terminate(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* Terminate for MATLABSystem: '<Root>/Fcn3' */
+if (slexMulticoreExample_DW.obj.isInitialized == 1) {
+    slexMulticoreExample_DW.obj.isInitialized = 2;
+}
+/* End of Terminate for MATLABSystem: '<Root>/Fcn3' */
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function TerminateFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Terminate(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 3, fcnProtoType)>
+%endfunction

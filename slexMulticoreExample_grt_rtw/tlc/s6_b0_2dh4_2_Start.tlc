@@ -1,0 +1,20 @@
+%implements s6_b0_2dh4_2_Start "C"
+
+%function Start(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* Start for RateTransition: '<Root>/TmpRTBAtFcn3Inport1' */
+slexMulticoreExample_B.TmpRTBAtFcn3Inport1 = %<(SLibCG_SE(SLibCGIR_PV(2, 0, 2, 1, "", -1, "", 0)))>;
+rtw_win_mutex_create(&slexMulticoreExample_DW.TmpRTBAtFcn3Inport1_d0_SEMAPHORE);
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function StartFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Start(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 0, fcnProtoType)>
+%endfunction

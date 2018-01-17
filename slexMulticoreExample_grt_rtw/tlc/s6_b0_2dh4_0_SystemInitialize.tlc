@@ -1,0 +1,19 @@
+%implements s6_b0_2dh4_0_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* InitializeConditions for RateTransition: '<Root>/TmpRTBAtFcn2Inport2' */
+slexMulticoreExample_DW.TmpRTBAtFcn2Inport2_Buf0 = %<(SLibCG_SE(SLibCGIR_PV(0, 0, 0, 1, "", -1, "", 0)))>;
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void SystemInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 1, fcnProtoType)>
+%endfunction

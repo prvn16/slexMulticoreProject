@@ -1,0 +1,54 @@
+%implements s6_b0_2dh4_3_Update "C"
+
+%function UpdateForTID(block, system, tid) Output
+%if tid == 1
+%assign ::GlobalCurrentTID = 1
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcUpdateFcnOfS3B0Tid1 = OpaqueTLCBlockFcnForMdlRefTID("Update", 3, 0, 1, 3, 3)
+%if !WHITE_SPACE(tlcUpdateFcnOfS3B0Tid1)
+/* Update for ModelReference: '<Root>/Fcn2' */
+%<tlcUpdateFcnOfS3B0Tid1>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 2
+%assign ::GlobalCurrentTID = 2
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcUpdateFcnOfS3B0Tid2 = OpaqueTLCBlockFcnForMdlRefTID("Update", 3, 0, 2, 3, 4)
+%if !WHITE_SPACE(tlcUpdateFcnOfS3B0Tid2)
+/* Update for ModelReference: '<Root>/Fcn2' */
+%<tlcUpdateFcnOfS3B0Tid2>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction
+%function UpdateFcnProtoTypeForTID(block, system, tid) Output
+%if tid == 1
+%assign ::GlobalCurrentTID = 1
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Update(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(3, 3, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 2
+%assign ::GlobalCurrentTID = 2
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Update(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(3, 4, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction

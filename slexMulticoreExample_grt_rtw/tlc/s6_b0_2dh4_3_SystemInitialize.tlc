@@ -1,0 +1,22 @@
+%implements s6_b0_2dh4_3_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcSystemInitializeFcnOfS3B0 = OpaqueTLCBlockFcnForMdlRef("SystemInitialize", 3, 0, 3, 0)
+%if !WHITE_SPACE(tlcSystemInitializeFcnOfS3B0)
+/* SystemInitialize for ModelReference: '<Root>/Fcn2' */
+%<tlcSystemInitializeFcnOfS3B0>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void SystemInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(3, 0, fcnProtoType)>
+%endfunction

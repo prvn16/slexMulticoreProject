@@ -1,0 +1,13 @@
+%implements s6_b0_2dh4_5_PublicModuleTypes "C"
+
+%function PublicModuleTypes(block) Output
+
+#ifndef typedef_slexMulticoreFcn3_slexMulticoreExample_T
+#define typedef_slexMulticoreFcn3_slexMulticoreExample_T
+typedef struct
+{
+    int32_T isInitialized;
+    real_T nIter;
+} slexMulticoreFcn3_slexMulticoreExample_T;
+#endif /*typedef_slexMulticoreFcn3_slexMulticoreExample_T*/
+%endfunction

@@ -1,0 +1,27 @@
+%implements s6_b0_2dh4_4_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcSystemInitializeFcnOfS4B0 = OpaqueTLCBlockFcnForMdlRef("SystemInitialize", 4, 0, 4, 0)
+/* InitializeConditions for TaskTransBlk: '<Root>/TmpTaskTransAtFcn1Inport2' */
+slexMulticoreExample_DW.fr_buf_1 = 1;
+slexMulticoreExample_DW.TmpTaskTransAtFcn3Outport1_buf_1[1] = %<(SLibCG_SE(SLibCGIR_PV(3, 0, 4, 1, "", -1, "", 0)))>;
+%if !WHITE_SPACE(tlcSystemInitializeFcnOfS4B0)
+/* SystemInitialize for ModelReference: '<Root>/Fcn1' incorporates:
+ *  Inport: '<Root>/In1'
+ */
+%<tlcSystemInitializeFcnOfS4B0>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void SystemInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(4, 0, fcnProtoType)>
+%endfunction

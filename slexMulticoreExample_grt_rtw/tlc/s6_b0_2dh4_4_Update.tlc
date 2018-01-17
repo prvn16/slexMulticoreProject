@@ -1,0 +1,24 @@
+%implements s6_b0_2dh4_4_Update "C"
+
+%function Update(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcUpdateFcnOfS4B0 = OpaqueTLCBlockFcnForMdlRef("Update", 4, 0, 4, 2)
+%if !WHITE_SPACE(tlcUpdateFcnOfS4B0)
+/* Update for ModelReference: '<Root>/Fcn1' incorporates:
+ *  Inport: '<Root>/In1'
+ */
+%<tlcUpdateFcnOfS4B0>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function UpdateFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Update(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(4, 2, fcnProtoType)>
+%endfunction

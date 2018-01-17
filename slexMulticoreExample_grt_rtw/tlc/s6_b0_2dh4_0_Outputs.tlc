@@ -1,0 +1,91 @@
+%implements s6_b0_2dh4_0_Outputs "C"
+
+%function OutputsForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%openfile localVarDecl
+int8_T wrBufIdx;
+%closefile localVarDecl
+/* RateTransition: '<Root>/TmpRTBAtFcn2Inport2' */
+rtw_win_mutex_wait(slexMulticoreExample_DW.TmpRTBAtFcn2Inport2_d0_SEMAPHORE);
+wrBufIdx = (int8_T)(slexMulticoreExample_DW.TmpRTBAtFcn2Inport2_LstBufWR + 1);
+if (wrBufIdx == 3) {
+    wrBufIdx = 0;
+}
+if (wrBufIdx == slexMulticoreExample_DW.TmpRTBAtFcn2Inport2_RDBuf) {
+    wrBufIdx++;
+    if (wrBufIdx == 3) {
+        wrBufIdx = 0;
+    }
+}
+rtw_win_mutex_release(slexMulticoreExample_DW.TmpRTBAtFcn2Inport2_d0_SEMAPHORE);
+switch (wrBufIdx) {
+  case 0:
+    slexMulticoreExample_DW.TmpRTBAtFcn2Inport2_Buf0 = slexMulticoreExample_B.Fcn3;
+    break;
+  case 1:
+    slexMulticoreExample_DW.TmpRTBAtFcn2Inport2_Buf1 = slexMulticoreExample_B.Fcn3;
+    break;
+  case 2:
+    slexMulticoreExample_DW.TmpRTBAtFcn2Inport2_Buf2 = slexMulticoreExample_B.Fcn3;
+    break;
+}
+slexMulticoreExample_DW.TmpRTBAtFcn2Inport2_LstBufWR = wrBufIdx;
+/* End of RateTransition: '<Root>/TmpRTBAtFcn2Inport2' */
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutput0LocalVars", localVarDecl)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 1
+%assign ::GlobalCurrentTID = 1
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* RateTransition: '<Root>/TmpRTBAtFcn2Inport2' */
+rtw_win_mutex_wait(slexMulticoreExample_DW.TmpRTBAtFcn2Inport2_d0_SEMAPHORE);
+slexMulticoreExample_DW.TmpRTBAtFcn2Inport2_RDBuf = slexMulticoreExample_DW.TmpRTBAtFcn2Inport2_LstBufWR;
+rtw_win_mutex_release(slexMulticoreExample_DW.TmpRTBAtFcn2Inport2_d0_SEMAPHORE);
+switch (slexMulticoreExample_DW.TmpRTBAtFcn2Inport2_RDBuf) {
+  case 0:
+    slexMulticoreExample_B.TmpRTBAtFcn2Inport2 = slexMulticoreExample_DW.TmpRTBAtFcn2Inport2_Buf0;
+    break;
+  case 1:
+    slexMulticoreExample_B.TmpRTBAtFcn2Inport2 = slexMulticoreExample_DW.TmpRTBAtFcn2Inport2_Buf1;
+    break;
+  case 2:
+    slexMulticoreExample_B.TmpRTBAtFcn2Inport2 = slexMulticoreExample_DW.TmpRTBAtFcn2Inport2_Buf2;
+    break;
+}
+/* End of RateTransition: '<Root>/TmpRTBAtFcn2Inport2' */
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutput1LocalVars", localVarDecl)>
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction
+%function OutputsFcnProtoTypeForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 2, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 1
+%assign ::GlobalCurrentTID = 1
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(0, 3, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction

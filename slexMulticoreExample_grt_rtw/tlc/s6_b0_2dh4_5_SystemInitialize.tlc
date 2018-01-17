@@ -1,0 +1,19 @@
+%implements s6_b0_2dh4_5_SystemInitialize "C"
+
+%function SystemInitialize(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* InitializeConditions for TaskTransBlk: '<Root>/TmpTaskTransAtFcn3Outport1' */
+slexMulticoreExample_DW.fw_buf_1 = 0;
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function SystemInitializeFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void SystemInitialize(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 1, fcnProtoType)>
+%endfunction

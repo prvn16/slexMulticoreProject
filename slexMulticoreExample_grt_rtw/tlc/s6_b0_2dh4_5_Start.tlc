@@ -1,0 +1,22 @@
+%implements s6_b0_2dh4_5_Start "C"
+
+%function Start(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* Start for MATLABSystem: '<Root>/Fcn3' */
+slexMulticoreExample_DW.obj.isInitialized = 0;
+slexMulticoreExample_DW.objisempty = true;
+slexMulticoreExample_DW.obj.nIter = %<(SLibCG_SE(SLibCGIR_PV(4, 0, 5, 1, "", -1, "", 0)))>;
+slexMulticoreExample_DW.obj.isInitialized = 1;
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function StartFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Start(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(5, 0, fcnProtoType)>
+%endfunction

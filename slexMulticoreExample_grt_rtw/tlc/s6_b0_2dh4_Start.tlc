@@ -1,0 +1,33 @@
+%implements s6_b0_2dh4_Start "C"
+
+%function Start(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[2], "Start",0)
+%<SLibCGIRGenReusableSysCall("Start", [], 2, 0, 0, 0, 0, 6)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[5], "Start",0)
+%<SLibCGIRGenReusableSysCall("Start", [], 5, 0, 0, 0, 0, 6)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[1], "Start",0)
+%<SLibCGIRGenReusableSysCall("Start", [], 1, 0, 0, 0, 0, 6)>\
+
+%endif
+%if !SLibCGSysFcnIsEmptyForTid(CompiledModel.System[0], "Start",0)
+%<SLibCGIRGenReusableSysCall("Start", [], 0, 0, 0, 0, 0, 6)>\
+
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function StartFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Start(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(6, 0, fcnProtoType)>
+%endfunction

@@ -1,0 +1,28 @@
+%implements s6_b0_2dh4_4_Outputs "C"
+
+%function Outputs(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+%assign tlcOutputsFcnOfS4B0 = OpaqueTLCBlockFcnForMdlRef("Outputs", 4, 0, 4, 1)
+/* TaskTransBlk: '<Root>/TmpTaskTransAtFcn1Inport2' */
+slexMulticoreExample_B.TmpTaskTransAtFcn1Inport2 = slexMulticoreExample_DW.TmpTaskTransAtFcn3Outport1_buf_1[slexMulticoreExample_DW.fr_buf_1];
+slexMulticoreExample_DW.fr_buf_1 = 1 - slexMulticoreExample_DW.fr_buf_1;
+%if !WHITE_SPACE(tlcOutputsFcnOfS4B0)
+/* ModelReference: '<Root>/Fcn1' incorporates:
+ *  Inport: '<Root>/In1'
+ */
+%<tlcOutputsFcnOfS4B0>\
+%endif
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%endfunction
+%function OutputsFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(4, 1, fcnProtoType)>
+%endfunction

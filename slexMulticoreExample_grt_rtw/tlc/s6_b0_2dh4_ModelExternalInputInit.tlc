@@ -1,0 +1,19 @@
+%implements s6_b0_2dh4_ModelExternalInputInit "C"
+
+%function ModelExternalInputInit(block, system) Output
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+U1 = 0.0;
+U2 = 0.0;
+%closefile cfgTxt
+%<cfgTxt>
+%endfunction
+%function ModelExternalInputInitFcnProtoType(block, system) Output
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void ModelExternalInputInit(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(6, 3, fcnProtoType)>
+%endfunction

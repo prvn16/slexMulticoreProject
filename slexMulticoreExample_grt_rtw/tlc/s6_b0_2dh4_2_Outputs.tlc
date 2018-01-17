@@ -1,0 +1,39 @@
+%implements s6_b0_2dh4_2_Outputs "C"
+
+%function OutputsForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%assign cfgTxt = ""
+%openfile cfgTxt
+%assign localVarDecl = ""
+/* RateTransition: '<Root>/TmpRTBAtFcn3Inport1' */
+rtw_win_mutex_wait(slexMulticoreExample_DW.TmpRTBAtFcn3Inport1_d0_SEMAPHORE);
+slexMulticoreExample_DW.TmpRTBAtFcn3Inport1_RDBuf = slexMulticoreExample_DW.TmpRTBAtFcn3Inport1_LstBufWR;
+rtw_win_mutex_release(slexMulticoreExample_DW.TmpRTBAtFcn3Inport1_d0_SEMAPHORE);
+slexMulticoreExample_B.TmpRTBAtFcn3Inport1 = slexMulticoreExample_DW.TmpRTBAtFcn3Inport1_Buf[slexMulticoreExample_DW.TmpRTBAtFcn3Inport1_RDBuf];
+%closefile cfgTxt
+%<cfgTxt>
+%<LibSetSystemField(system, "CachedOutput0LocalVars", localVarDecl)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 1
+%assign ::GlobalCurrentTID = 1
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction
+%function OutputsFcnProtoTypeForTID(block, system, tid) Output
+%if tid == 0
+%assign ::GlobalCurrentTID = 0
+%assign fcnProtoType = ""
+%openfile fcnProtoType
+static void Outputs(\
+%assign comma = ""
+%closefile fcnProtoType
+%<SLibCG_SetFcnProtoType(2, 2, fcnProtoType)>
+%assign ::GlobalCurrentTID = []
+%endif
+%if tid == 1
+%assign ::GlobalCurrentTID = 1
+%assign ::GlobalCurrentTID = []
+%endif
+%endfunction

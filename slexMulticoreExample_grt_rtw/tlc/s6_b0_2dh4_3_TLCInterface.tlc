@@ -1,0 +1,252 @@
+%implements s6_b0_2dh4_3_TLCInterface "C"
+
+%function getInputAddr_3_0_3_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_B.TmpRTBAtFcn2Inport1"
+%endfunction
+
+%function getInput_3_0_3_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_B.TmpRTBAtFcn2Inport1"
+%endfunction
+
+%function getInputAddr_3_0_3_0_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_B.TmpRTBAtFcn2Inport2"
+%endfunction
+
+%function getInput_3_0_3_0_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_B.TmpRTBAtFcn2Inport2"
+%endfunction
+
+%function getOutputAddr_3_0_3_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TicToc2"
+%endfunction
+
+%function getOutput_3_0_3_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TicToc2"
+%endfunction
+
+%function getOutputAddr_3_0_3_0_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_B.Fcn2_o2"
+%endfunction
+
+%function getOutput_3_0_3_0_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_B.Fcn2_o2"
+%endfunction
+
+%function getDWorkAddr_3_0_3_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_DW.Fcn2_InstanceData"
+%endfunction
+
+%function getDWork_3_0_3_0_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_DW.Fcn2_InstanceData"
+%endfunction
+
+%function getInputAddr_3_0_3_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_B.TmpRTBAtFcn2Inport1"
+%endfunction
+
+%function getInput_3_0_3_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_B.TmpRTBAtFcn2Inport1"
+%endfunction
+
+%function getInputAddr_3_0_3_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_B.TmpRTBAtFcn2Inport2"
+%endfunction
+
+%function getInput_3_0_3_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_B.TmpRTBAtFcn2Inport2"
+%endfunction
+
+%function getOutputAddr_3_0_3_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TicToc2"
+%endfunction
+
+%function getOutput_3_0_3_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TicToc2"
+%endfunction
+
+%function getOutputAddr_3_0_3_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_B.Fcn2_o2"
+%endfunction
+
+%function getOutput_3_0_3_1_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_B.Fcn2_o2"
+%endfunction
+
+%function getDWorkAddr_3_0_3_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_DW.Fcn2_InstanceData"
+%endfunction
+
+%function getDWork_3_0_3_1_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_DW.Fcn2_InstanceData"
+%endfunction
+
+%function getInputAddr_3_0_3_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_B.TmpRTBAtFcn2Inport1"
+%endfunction
+
+%function getInput_3_0_3_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_B.TmpRTBAtFcn2Inport1"
+%endfunction
+
+%function getInputAddr_3_0_3_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_B.TmpRTBAtFcn2Inport2"
+%endfunction
+
+%function getInput_3_0_3_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_B.TmpRTBAtFcn2Inport2"
+%endfunction
+
+%function getOutputAddr_3_0_3_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TicToc2"
+%endfunction
+
+%function getOutput_3_0_3_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TicToc2"
+%endfunction
+
+%function getOutputAddr_3_0_3_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_B.Fcn2_o2"
+%endfunction
+
+%function getOutput_3_0_3_2_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_B.Fcn2_o2"
+%endfunction
+
+%function getDWorkAddr_3_0_3_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_DW.Fcn2_InstanceData"
+%endfunction
+
+%function getDWork_3_0_3_2_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_DW.Fcn2_InstanceData"
+%endfunction
+
+%function getInputAddr_3_0_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_B.TmpRTBAtFcn2Inport1"
+%endfunction
+
+%function getInput_3_0_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_B.TmpRTBAtFcn2Inport1"
+%endfunction
+
+%function getInputAddr_3_0_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_B.TmpRTBAtFcn2Inport2"
+%endfunction
+
+%function getInput_3_0_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_B.TmpRTBAtFcn2Inport2"
+%endfunction
+
+%function getOutputAddr_3_0_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TicToc2"
+%endfunction
+
+%function getOutput_3_0_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TicToc2"
+%endfunction
+
+%function getOutputAddr_3_0_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_B.Fcn2_o2"
+%endfunction
+
+%function getOutput_3_0_3_3_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_B.Fcn2_o2"
+%endfunction
+
+%function getDWorkAddr_3_0_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_DW.Fcn2_InstanceData"
+%endfunction
+
+%function getDWork_3_0_3_3_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_DW.Fcn2_InstanceData"
+%endfunction
+
+%function getInputAddr_3_0_3_4_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_B.TmpRTBAtFcn2Inport1"
+%endfunction
+
+%function getInput_3_0_3_4_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_B.TmpRTBAtFcn2Inport1"
+%endfunction
+
+%function getInputAddr_3_0_3_4_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_B.TmpRTBAtFcn2Inport2"
+%endfunction
+
+%function getInput_3_0_3_4_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_B.TmpRTBAtFcn2Inport2"
+%endfunction
+
+%function getOutputAddr_3_0_3_4_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&TicToc2"
+%endfunction
+
+%function getOutput_3_0_3_4_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "TicToc2"
+%endfunction
+
+%function getOutputAddr_3_0_3_4_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_B.Fcn2_o2"
+%endfunction
+
+%function getOutput_3_0_3_4_1_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_B.Fcn2_o2"
+%endfunction
+
+%function getDWorkAddr_3_0_3_4_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "&slexMulticoreExample_DW.Fcn2_InstanceData"
+%endfunction
+
+%function getDWork_3_0_3_4_0_0(opaqueBlock, block, lcv, ucv, sigIdx, reim) void
+
+%return "slexMulticoreExample_DW.Fcn2_InstanceData"
+%endfunction
+
